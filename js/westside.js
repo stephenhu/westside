@@ -170,7 +170,6 @@ function loadArticle() {
 
   var params = new URLSearchParams(window.location.search);
 
-  console.log(params);
   title.value = params.get("title");
 
   octokit.repos.getContents({
