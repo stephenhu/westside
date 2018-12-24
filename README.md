@@ -17,9 +17,11 @@ for additional formatting and flexibility.  Markdown pages are then downloaded a
 ## Dependencies
 
 * Github account
-* Github page
+* Github pages repository
 * markedjs
 * @octokit/rest.js
+* bootstrap
+* font-awesome
 
 Tested on Chrome browser
 
