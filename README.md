@@ -1,6 +1,6 @@
-# westsidejs
+# Westsidejs
 
-Westsidejs is a single page, client side, web framework that utilizes standard web technologies like css, html, js, and md for building dynamic sites.  There's no need to learn jsx or other such templating languages.  All content is rendered client side and hosted on Github, S3, or a common web server.
+Westsidejs is a single page, client side web framework that utilizes standard web technologies like css, html, js, and md for building dynamic sites.  There's no need to learn jsx or other templating languages.  All content is rendered client side and hosted on Github, S3, or a common web server.
 
 ## Design
 
@@ -16,7 +16,8 @@ for additional formatting and flexibility.  Markdown pages are then downloaded a
 
 ## Dependencies
 
-* Github account or S3
+* Github account
+* Github page
 * markedjs
 * @octokit/rest.js
 
@@ -29,7 +30,9 @@ Tested on Chrome browser
 ```html
 <html>
 <head>
-  <script src="westside.js"></script>
+  <script src="https://unpkg.com/marked@0.5.2/lib/marked.js"></script>
+  <script src="octokit/octokit-rest.min.js"></script>
+  <script src="js/westside.js"></script>
 </head>
 <body>
   <main id="root">
@@ -53,19 +56,35 @@ Tested on Chrome browser
   "repository": {
     "type": "github",
     "owner": "username",
-    "name": "myblog"
+    "name": "username.github.io"
   },
   "articles": [
     {
       "title": "Golang is the Best Language",
       "created": 1547136000000,
+      "updated": 1547136000000,
       "path": "golang.md"
     },
     {
       "title": "Unit Testing Best Pratices",
       "created": 1535136024901,
+      "updated": 1535136024901,
       "path": "unit-testing.md"
     }
   ]
 }
 ```
+
+## TODO: Westside API
+
+## Todo
+
+* Stackedit editor integration
+* S3 backend support
+* Client side router (page.js)
+* Javascript modules
+* sort articles
+* defect: if index.json does not exist.
+* create westside module
+* doc: westside api
+* defect: quota management for github api

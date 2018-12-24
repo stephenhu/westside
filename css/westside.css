@@ -1,0 +1,99 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #000000;
+  font-weight: 200;
+}
+
+a, a:hover, a:visited, a:link {
+  text-decoration: none;
+  //color: #0181ba;
+  //color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+td {
+  color: #0181ba;
+}
+
+th {
+  color: #0181ba;
+}
+
+input[type=checkbox] + label:before{
+  background: #222222;
+}
+
+input[type=checkbox]:checked {
+  background: #222222;
+}
+
+/* custom classes */
+
+.teal {
+  color: #0181ba;
+}
+
+.tealbg {
+  background: #0181ba;
+}
+
+.gray {
+  color: #222222;
+}
+
+.graybg {
+  background: #222222;
+}
+
+.white {
+  color: #ffffff;
+}
+
+/* bootstrap overrides */
+
+.navbar {
+  background: #003366;
+  //background: #0181ba;
+  opacity: 0.9;
+}
+
+.list-group {
+  background: #000000;
+}
+
+.list-group-item {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #003366;
+}
+
+.table-dark {
+  background: #111111;
+}
+
+.form-control {
+  background: #111111;
+  color: #0181ba;
+  border: 1px solid #003366;
+}
+
+.form-control:focus {
+  background: #111111;
+  color: #0181ba;
+}
+
+/* webkit overrides */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {  
+  -webkit-text-fill-color: #0181ba;
+  transition: background-color 5000s ease-in-out 0s;
+}
