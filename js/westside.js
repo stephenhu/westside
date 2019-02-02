@@ -17,7 +17,7 @@ const EXCLUDE_README          = "readme.md";
 
 function fName(s) {
 
-  var r = s.replace(/ /g, "-");
+  var r = s.trim().replace(/ '!?@$&%#^()/g, "");
 
   return r.toLowerCase() + EXT_MARKDOWN;
 
