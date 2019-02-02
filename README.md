@@ -1,6 +1,6 @@
-# Westsidejs
+# Westside
 
-Westsidejs is a single page, client side web framework that utilizes standard web technologies like css, html, js, and md for building dynamic sites.  There's no need to learn jsx or other templating languages.  All content is rendered client side and hosted on Github, S3, or a common web server.
+Westside is a single page, client side web framework that utilizes standard web technologies like css, html, js, and md for building dynamic sites.  There's no need to learn jsx or other templating languages.  All content is rendered client side and hosted on Github, S3, or a common web server.
 
 ## Design
 
@@ -79,14 +79,3 @@ Tested on Chrome browser
 
 ## TODO: Westside API
 
-## Todo
-
-* Stackedit editor integration
-* S3 backend support
-* Client side router (page.js)
-* Javascript modules
-* sort articles
-* defect: if index.json does not exist.
-* create westside module
-* doc: westside api
-* defect: quota management for github api

@@ -70,15 +70,19 @@ function createNewsDeck() {
 function createArticleHeader(s, t, c) {
 
   var title   = document.createElement("h2");
+  var anchor  = document.createElement("a");
   var created = document.createElement("h6");
   
   title.setAttribute("class", "red");
   created.setAttribute("class", "light-blue");
+  anchor.setAttribute("href", "#" + fName(t));
 
   var d = new Date(c);
 
-  title.innerText = t;
+  anchor.innerText = t;
   created.innerText = d.toString();
+
+  title.appendChild(anchor);
 
   s.appendChild(title);
   s.appendChild(created);
@@ -151,7 +155,15 @@ function listArticles() {
 
     var h1 = document.getElementById("articleCount");
     
-    h1.innerText = "Articles (" + obj.articles.length + ")";
+    var sp = document.createElement("span");
+
+    sp.setAttribute("class", "badge badge-danger");
+
+    h1.innerText = "Articles "
+    
+    sp.innerText = obj.articles.length;
+
+    h1.appendChild(sp);
 
     for(var i = 0; i < obj.articles.length; i++) {
       addRow(articles, obj.articles[i]);
@@ -529,6 +541,7 @@ function editorPage(u) {
   var dashboard = document.getElementById("dashboard");
   var started   = document.getElementById("getstarted");
   var about     = document.getElementById("about");
+  var settings  = document.getElementById("settings");
   
   if(!u) {
     clearEditorPage();
@@ -538,6 +551,7 @@ function editorPage(u) {
   dashboard.setAttribute("class", "container d-none");
   started.setAttribute("class", "container d-none");
   about.setAttribute("class", "container d-none");
+  settings.setAttribute("class", "container d-none");
 
 } // editorPage
 
@@ -548,16 +562,33 @@ function homePage() {
   var dashboard = document.getElementById("dashboard");
   var started   = document.getElementById("getstarted");
   var about     = document.getElementById("about");
+  var settings  = document.getElementById("settings");
 
   editor.setAttribute("class", "container d-none");
   dashboard.setAttribute("class", "container");
   started.setAttribute("class", "container d-none");
   about.setAttribute("class", "container d-none");
-  
+  settings.setAttribute("class", "container d-none");
+
 } // homePage
 
 
 function settingsPage() {
+
+  var editor    = document.getElementById("editor");
+  var dashboard = document.getElementById("dashboard");
+  var started   = document.getElementById("getstarted");
+  var about     = document.getElementById("about");
+  var settings  = document.getElementById("settings");
+
+  editor.setAttribute("class", "container d-none");
+  dashboard.setAttribute("class", "container d-none");
+  started.setAttribute("class", "container d-none");
+  about.setAttribute("class", "container d-none");
+  settings.setAttribute("class", "container");
+
+  // TODO: load settings, how do settings get loaded?
+  // Maybe a cli to generate and initialize the first
 
 } // settingsPage
 
@@ -573,11 +604,13 @@ function aboutPage() {
   var dashboard = document.getElementById("dashboard");
   var started   = document.getElementById("getstarted");
   var about     = document.getElementById("about");
+  var settings  = document.getElementById("settings");
 
   editor.setAttribute("class", "container d-none");
   dashboard.setAttribute("class", "container d-none");
   started.setAttribute("class", "container d-none");
   about.setAttribute("class", "container");
+  settings.setAttribute("class", "container d-none");
 
 } // aboutPage
 
